@@ -1,6 +1,6 @@
 # NAME
 
-Dancer2::Plugin::ParamShortcuts - Sugar for the params() keyword
+Dancer2::Plugin::ParamKeywords - Sugar for the params() keyword
 
 # VERSION
 
@@ -43,7 +43,7 @@ for a list of valid sources.
 
     # In config.yml
     plugins:
-      ParamShortcuts:
+      ParamKeywords:
         munge_precedence:
           - route
           - body

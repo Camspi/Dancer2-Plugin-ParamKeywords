@@ -12,25 +12,31 @@ my %WriteMakefileArgs = (
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0
   },
-  "DISTNAME" => "Dancer2-Plugin-ParamShortcuts",
+  "DISTNAME" => "Dancer2-Plugin-ParamKeywords",
   "EXE_FILES" => [],
   "LICENSE" => "perl",
-  "NAME" => "Dancer2::Plugin::ParamShortcuts",
+  "NAME" => "Dancer2::Plugin::ParamKeywords",
   "PREREQ_PM" => {
     "Dancer2::Plugin" => 0,
     "strict" => 0,
     "warnings" => 0
   },
+  "TEST_REQUIRES" => {
+    "Dancer2" => 0,
+    "Test::More" => 0
+  },
   "VERSION" => "v0.0.1",
   "test" => {
-    "TESTS" => ""
+    "TESTS" => "t/*.t"
   }
 );
 
 
 my %FallbackPrereqs = (
+  "Dancer2" => 0,
   "Dancer2::Plugin" => 0,
   "ExtUtils::MakeMaker" => 0,
+  "Test::More" => 0,
   "strict" => 0,
   "warnings" => 0
 );

@@ -32,7 +32,7 @@
 
         # In config.yml
         plugins:
-          ParamShortcuts:
+          ParamKeywords:
             munge_precedence:
               - route
               - body

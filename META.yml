@@ -2,7 +2,9 @@
 abstract: 'Sugar for the params() keyword'
 author:
   - 'Chris Tijerina'
-build_requires: {}
+build_requires:
+  Dancer2: '0'
+  Test::More: '0'
 configure_requires:
   ExtUtils::MakeMaker: '0'
 dynamic_config: 0
@@ -11,14 +13,16 @@ license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: '1.4'
-name: Dancer2-Plugin-ParamShortcuts
+name: Dancer2-Plugin-ParamKeywords
 provides: {}
 requires:
   Dancer2::Plugin: '0'
   strict: '0'
   warnings: '0'
 resources:
-  bugtracker: https://github.com/Camspi/Dancer2-Plugin-ParamShortcuts/issues
-  homepage: https://github.com/Camspi/Dancer2-Plugin-ParamShortcuts
-  repository: https://github.com/Camspi/Dancer2-Plugin-ParamShortcuts.git
+  bugtracker: https://github.com/Camspi/Dancer2-Plugin-ParamKeywords/issues
+  homepage: https://github.com/Camspi/Dancer2-Plugin-ParamKeywords
+  repository: https://github.com/Camspi/Dancer2-Plugin-ParamKeywords.git
 version: v0.0.1
+x_contributors:
+  - 'Chris Tijerina <amarus18@hotmail.com>'

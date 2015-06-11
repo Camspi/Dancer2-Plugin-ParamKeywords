@@ -7,3 +7,4 @@ README
 README.mkdn
 dist.ini
 lib/Dancer2/Plugin/ParamKeywords.pm
+t/plugin.t
