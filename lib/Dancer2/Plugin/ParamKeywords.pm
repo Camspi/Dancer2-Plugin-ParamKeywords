@@ -24,7 +24,7 @@ register munged_params => sub {
      die 'Please configure the plugin settings for ParamShortcuts to use this keyword'
        unless ref($conf) eq 'ARRAY';
 
-     my %params = map { $dsl->app->params($source) } reverse @$conf;
+     my %params = map { $dsl->app->params($_) } reverse @$conf;
      wantarray ? %params : \%params;
 };
 
