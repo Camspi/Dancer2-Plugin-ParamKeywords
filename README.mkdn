@@ -6,6 +6,8 @@ Dancer2::Plugin::ParamKeywords - Sugar for the params() keyword
 
 version v0.0.1
 
+# SYNOPSIS
+
     use Dancer2;
     use Dancer2::Plugin::ParamKeywords;
 
@@ -14,6 +16,8 @@ version v0.0.1
         my $get_param   = query_param('some_named_parameter');
         my $post_param  = body_param('some_named_parameter');
     };
+
+# DESCRIPTION
 
 The default [Dancer2::Core::Request params
 accessor](https://metacpan.org/pod/Dancer2::Core::Request#params-source)
@@ -36,6 +40,8 @@ In the above example, if the browser/client sends a parameter
 This plugin provides keywords that wrap around `params($source)`
 for convenience to fetch parameter values from specific sources.
 
+## CONFIGURATION
+
 The `munged_params` keyword requires you to configure an order of
 precedence by which to prefer parameter sources.  Please see 
 [Dancer2::Core::Request params accessor](https://metacpan.org/pod/Dancer2::Core::Request#params-source)
@@ -52,19 +58,35 @@ for a list of valid sources.
 If you won't be using this keyword, you don't need to bother configuring
 this plugin.
 
+# KEYWORDS
+
+## munged\_params
+
 Returns a hash in list context or a hash reference in scalar context of
 parameters munged according to the precedence provided in the configuration
 file (from highest to lowest).
 
+## query\_param(Str)
+
 Returns the value supplied for a given parameter in the query string.
+
+## query\_params(Str)
 
 Returns the arguments and values supplied by query string. Returns a hash in list context or a hasref in scalar context.
 
+## body\_param(Str)
+
 Returns the value supplied for a given parameter in the `POST` arguments.
+
+## body\_params(Str)
 
 Returns arguments and values supplied by a `POST` request.  Returns a hash in list context or a hasref in scalar context.
 
+## route\_param(Str)
+
 Returns the value supplied for a given named parameter in the route.
+
+## route\_params(Str)
 
 Returns the arguments and values suppled by the route. Returns a hash in list context or a hasref in scalar context.
 
@@ -78,51 +100,3 @@ This software is copyright (c) 2015 by Chris Tijerina.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
-
-# POD ERRORS
-
-Hey! **The above document had some coding errors, which are explained below:**
-
-- Around line 13:
-
-    Unknown directive: =h1
-
-- Around line 24:
-
-    Unknown directive: =h1
-
-- Around line 47:
-
-    Unknown directive: =h2
-
-- Around line 65:
-
-    Unknown directive: =h1
-
-- Around line 67:
-
-    Unknown directive: =h2
-
-- Around line 73:
-
-    Unknown directive: =h2
-
-- Around line 77:
-
-    Unknown directive: =h2
-
-- Around line 81:
-
-    Unknown directive: =h2
-
-- Around line 85:
-
-    Unknown directive: =h2
-
-- Around line 89:
-
-    Unknown directive: =h2
-
-- Around line 93:
-
-    Unknown directive: =h2

@@ -1,3 +1,5 @@
+SYNOPSIS
+
         use Dancer2;
         use Dancer2::Plugin::ParamKeywords;
     
@@ -6,6 +8,8 @@
             my $get_param   = query_param('some_named_parameter');
             my $post_param  = body_param('some_named_parameter');
         };
+
+DESCRIPTION
 
     The default Dancer2::Core::Request params accessor munges parameters in
     the following precedence from highest to lowest: POST parameters, named
@@ -26,6 +30,8 @@
     This plugin provides keywords that wrap around params($source) for
     convenience to fetch parameter values from specific sources.
 
+ CONFIGURATION
+
     The munged_params keyword requires you to configure an order of
     precedence by which to prefer parameter sources. Please see
     Dancer2::Core::Request params accessor for a list of valid sources.
@@ -41,71 +47,38 @@
     If you won't be using this keyword, you don't need to bother
     configuring this plugin.
 
+KEYWORDS
+
+ munged_params
+
     Returns a hash in list context or a hash reference in scalar context of
     parameters munged according to the precedence provided in the
     configuration file (from highest to lowest).
 
+ query_param(Str)
+
     Returns the value supplied for a given parameter in the query string.
+
+ query_params(Str)
 
     Returns the arguments and values supplied by query string. Returns a
     hash in list context or a hasref in scalar context.
 
+ body_param(Str)
+
     Returns the value supplied for a given parameter in the POST arguments.
+
+ body_params(Str)
 
     Returns arguments and values supplied by a POST request. Returns a hash
     in list context or a hasref in scalar context.
 
+ route_param(Str)
+
     Returns the value supplied for a given named parameter in the route.
+
+ route_params(Str)
 
     Returns the arguments and values suppled by the route. Returns a hash
     in list context or a hasref in scalar context.
-
-POD ERRORS
-
-    Hey! The above document had some coding errors, which are explained
-    below:
-
-    Around line 1:
-
-      Unknown directive: =h1
-
-    Around line 12:
-
-      Unknown directive: =h1
-
-    Around line 35:
-
-      Unknown directive: =h2
-
-    Around line 53:
-
-      Unknown directive: =h1
-
-    Around line 55:
-
-      Unknown directive: =h2
-
-    Around line 61:
-
-      Unknown directive: =h2
-
-    Around line 65:
-
-      Unknown directive: =h2
-
-    Around line 69:
-
-      Unknown directive: =h2
-
-    Around line 73:
-
-      Unknown directive: =h2
-
-    Around line 77:
-
-      Unknown directive: =h2
-
-    Around line 81:
-
-      Unknown directive: =h2
 
