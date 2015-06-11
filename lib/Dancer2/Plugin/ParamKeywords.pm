@@ -100,7 +100,7 @@ file (from highest to lowest).
 
 Returns the value supplied for a given parameter in the query string.
 
-=head2 query_params(Str)
+=head2 query_params
 
 Returns the arguments and values supplied by query string. Returns a hash in list context or a hasref in scalar context.
 
@@ -108,7 +108,7 @@ Returns the arguments and values supplied by query string. Returns a hash in lis
 
 Returns the value supplied for a given parameter in the C<POST> arguments.
 
-=head2 body_params(Str)
+=head2 body_params
 
 Returns arguments and values supplied by a C<POST> request.  Returns a hash in list context or a hasref in scalar context.
 
@@ -116,6 +116,6 @@ Returns arguments and values supplied by a C<POST> request.  Returns a hash in l
 
 Returns the value supplied for a given named parameter in the route.
 
-=head2 route_params(Str)
+=head2 route_params
 
 Returns the arguments and values suppled by the route. Returns a hash in list context or a hasref in scalar context.

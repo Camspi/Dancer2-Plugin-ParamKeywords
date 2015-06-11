@@ -70,7 +70,7 @@ file (from highest to lowest).
 
 Returns the value supplied for a given parameter in the query string.
 
-## query\_params(Str)
+## query\_params
 
 Returns the arguments and values supplied by query string. Returns a hash in list context or a hasref in scalar context.
 
@@ -78,7 +78,7 @@ Returns the arguments and values supplied by query string. Returns a hash in lis
 
 Returns the value supplied for a given parameter in the `POST` arguments.
 
-## body\_params(Str)
+## body\_params
 
 Returns arguments and values supplied by a `POST` request.  Returns a hash in list context or a hasref in scalar context.
 
@@ -86,7 +86,7 @@ Returns arguments and values supplied by a `POST` request.  Returns a hash in li
 
 Returns the value supplied for a given named parameter in the route.
 
-## route\_params(Str)
+## route\_params
 
 Returns the arguments and values suppled by the route. Returns a hash in list context or a hasref in scalar context.
 
