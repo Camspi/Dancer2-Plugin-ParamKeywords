@@ -3,18 +3,19 @@ use warnings;
 
 package Dancer2::Plugin::ParamKeywords;
 use Dancer2::Plugin;
+use Data::Printer;
 
 our $VERSION = 'v0.0.1';
 
 foreach my $source ( qw( route query body ) ) {
     register "$source\_param" => sub {
         my ($dsl, $param)  = @_;
-        $dsl->app->params($source)->{$param};
+        $dsl->app->request->params($source)->{$param};
     };
     
     register "$source\_params" => sub {
         my $dsl  = shift;
-        $dsl->app->params($source); 
+        $dsl->app->request->params($source); 
     };
 }
 
@@ -24,7 +25,7 @@ register munged_params => sub {
      die 'Please configure the plugin settings for ParamKeywords to use this keyword'
        unless ref($conf) eq 'ARRAY';
 
-     my %params = map { $dsl->app->params($_) } reverse @$conf;
+     my %params = map { $dsl->app->request->params($_) } reverse @$conf;
      wantarray ? %params : \%params;
 };
 
