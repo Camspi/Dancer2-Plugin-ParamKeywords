@@ -82,3 +82,7 @@ KEYWORDS
     Returns the arguments and values suppled by the route. Returns a hash
     in list context or a hasref in scalar context.
 
+VERSIONING
+
+    This module follows semantic versioning (http://www.semver.org).
+

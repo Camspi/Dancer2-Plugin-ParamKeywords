@@ -19,13 +19,12 @@ name: Dancer2-Plugin-ParamKeywords
 provides: {}
 requires:
   Dancer2::Plugin: '0'
-  Data::Printer: '0'
   strict: '0'
   warnings: '0'
 resources:
   bugtracker: https://github.com/Camspi/Dancer2-Plugin-ParamKeywords/issues
   homepage: https://github.com/Camspi/Dancer2-Plugin-ParamKeywords
   repository: https://github.com/Camspi/Dancer2-Plugin-ParamKeywords.git
-version: v0.0.1
+version: v0.0.2
 x_contributors:
   - 'Chris Tijerina <amarus18@hotmail.com>'

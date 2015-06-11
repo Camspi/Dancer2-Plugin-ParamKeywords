@@ -18,7 +18,6 @@ my %WriteMakefileArgs = (
   "NAME" => "Dancer2::Plugin::ParamKeywords",
   "PREREQ_PM" => {
     "Dancer2::Plugin" => 0,
-    "Data::Printer" => 0,
     "strict" => 0,
     "warnings" => 0
   },
@@ -28,7 +27,7 @@ my %WriteMakefileArgs = (
     "Plack::Test" => 0,
     "Test::More" => 0
   },
-  "VERSION" => "v0.0.1",
+  "VERSION" => "v0.0.2",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -38,7 +37,6 @@ my %WriteMakefileArgs = (
 my %FallbackPrereqs = (
   "Dancer2" => 0,
   "Dancer2::Plugin" => 0,
-  "Data::Printer" => 0,
   "ExtUtils::MakeMaker" => 0,
   "HTTP::Request::Common" => 0,
   "Plack::Test" => 0,

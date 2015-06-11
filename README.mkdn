@@ -4,7 +4,7 @@ Dancer2::Plugin::ParamKeywords - Sugar for the params() keyword
 
 # VERSION
 
-version v0.0.1
+version v0.0.2
 
 # SYNOPSIS
 
@@ -89,6 +89,10 @@ Returns the value supplied for a given named parameter in the route.
 ## route\_params
 
 Returns the arguments and values suppled by the route. Returns a hash in list context or a hasref in scalar context.
+
+# VERSIONING
+
+This module follows semantic versioning ([http://www.semver.org](http://www.semver.org)).
 
 # AUTHOR
 

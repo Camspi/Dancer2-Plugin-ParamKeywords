@@ -3,9 +3,8 @@ use warnings;
 
 package Dancer2::Plugin::ParamKeywords;
 use Dancer2::Plugin;
-use Data::Printer;
 
-our $VERSION = 'v0.0.1';
+our $VERSION = 'v0.0.2';
 
 foreach my $source ( qw( route query body ) ) {
     register "$source\_param" => sub {
@@ -119,3 +118,7 @@ Returns the value supplied for a given named parameter in the route.
 =head2 route_params
 
 Returns the arguments and values suppled by the route. Returns a hash in list context or a hasref in scalar context.
+
+=head1 VERSIONING
+
+This module follows semantic versioning (L<http://www.semver.org>).
