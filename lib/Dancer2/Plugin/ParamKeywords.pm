@@ -1,10 +1,11 @@
+use 5.16.0;
 use strict;
 use warnings;
 
 package Dancer2::Plugin::ParamKeywords;
 use Dancer2::Plugin;
 
-our $VERSION = 'v0.0.2';
+our $VERSION = 'v0.0.3';
 
 foreach my $source ( qw( route query body ) ) {
     register "$source\_param" => sub {

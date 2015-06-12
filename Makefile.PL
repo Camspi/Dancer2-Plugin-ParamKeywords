@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-
+use 5.016000;
 
 use ExtUtils::MakeMaker;
 
@@ -15,11 +15,10 @@ my %WriteMakefileArgs = (
   "DISTNAME" => "Dancer2-Plugin-ParamKeywords",
   "EXE_FILES" => [],
   "LICENSE" => "perl",
+  "MIN_PERL_VERSION" => "5.016000",
   "NAME" => "Dancer2::Plugin::ParamKeywords",
   "PREREQ_PM" => {
-    "Dancer2::Plugin" => 0,
-    "strict" => 0,
-    "warnings" => 0
+    "Dancer2::Plugin" => 0
   },
   "TEST_REQUIRES" => {
     "Dancer2" => 0,
@@ -27,7 +26,7 @@ my %WriteMakefileArgs = (
     "Plack::Test" => 0,
     "Test::More" => 0
   },
-  "VERSION" => "v0.0.2",
+  "VERSION" => "v0.0.3",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -40,9 +39,7 @@ my %FallbackPrereqs = (
   "ExtUtils::MakeMaker" => 0,
   "HTTP::Request::Common" => 0,
   "Plack::Test" => 0,
-  "Test::More" => 0,
-  "strict" => 0,
-  "warnings" => 0
+  "Test::More" => 0
 );
 
 
