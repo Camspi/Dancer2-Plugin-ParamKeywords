@@ -32,9 +32,10 @@ DESCRIPTION
 
  CONFIGURATION
 
-    The munged_params keyword requires you to configure an order of
-    precedence by which to prefer parameter sources. Please see
-    Dancer2::Core::Request params accessor for a list of valid sources.
+    The "munged_params" and "munged_param" keywords require you to
+    configure an order of precedence by which to prefer parameter sources.
+    Please see Dancer2::Core::Request params accessor for a list of valid
+    sources.
 
         # In config.yml
         plugins:
@@ -44,10 +45,14 @@ DESCRIPTION
               - body
               - query
 
-    If you won't be using this keyword, you don't need to bother
+    If you won't be using the munged_* keywords, you don't need to bother
     configuring this plugin.
 
 KEYWORDS
+
+ munged_param(Str)
+
+    Returns the value of a given parameter from the "munged_params" hash.
 
  munged_params
 

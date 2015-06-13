@@ -5,7 +5,7 @@ use warnings;
 package Dancer2::Plugin::ParamKeywords;
 use Dancer2::Plugin;
 
-our $VERSION = 'v0.0.3';
+our $VERSION = 'v0.1.0';
 
 foreach my $source ( qw( route query body ) ) {
     register "$source\_param" => sub {
@@ -22,11 +22,21 @@ foreach my $source ( qw( route query body ) ) {
 register munged_params => sub {
      my $dsl = shift;
      my $conf = plugin_setting->{munge_precedence};
-     die 'Please configure the plugin settings for ParamKeywords to use this keyword'
+     die 'Please configure the plugin settings for ParamKeywords to use munged_params'
        unless ref($conf) eq 'ARRAY';
 
      my %params = map { $dsl->app->request->params($_) } reverse @$conf;
      wantarray ? %params : \%params;
+};
+
+register munged_param => sub {
+     my ($dsl, $param) = @_;
+     my $conf = plugin_setting->{munge_precedence};
+     die 'Please configure the plugin settings for ParamKeywords to use munged_param'
+       unless ref($conf) eq 'ARRAY';
+
+     my %params = map { $dsl->app->request->params($_) } reverse @$conf;
+     $params{$param};
 };
 
 register_plugin for_versions => [ 2 ] ;
@@ -72,7 +82,7 @@ for convenience to fetch parameter values from specific sources.
 
 =head2 CONFIGURATION
 
-The C<munged_params> keyword requires you to configure an order of
+The L</munged_params> and L</munged_param> keywords require you to configure an order of
 precedence by which to prefer parameter sources.  Please see 
 L<Dancer2::Core::Request params accessor|Dancer2::Core::Request/"params($source)">
 for a list of valid sources.
@@ -85,10 +95,14 @@ for a list of valid sources.
           - body
           - query
 
-If you won't be using this keyword, you don't need to bother configuring
+If you won't be using the munged_* keywords, you don't need to bother configuring
 this plugin.
 
 =head1 KEYWORDS
+
+=head2 munged_param(Str)
+
+Returns the value of a given parameter from the L</munged_params> hash.
 
 =head2 munged_params
 

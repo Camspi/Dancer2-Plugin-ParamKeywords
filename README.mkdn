@@ -4,7 +4,7 @@ Dancer2::Plugin::ParamKeywords - Sugar for the params() keyword
 
 # VERSION
 
-version v0.0.3
+version v0.1.0
 
 # SYNOPSIS
 
@@ -42,7 +42,7 @@ for convenience to fetch parameter values from specific sources.
 
 ## CONFIGURATION
 
-The `munged_params` keyword requires you to configure an order of
+The ["munged\_params"](#munged_params) and ["munged\_param"](#munged_param) keywords require you to configure an order of
 precedence by which to prefer parameter sources.  Please see 
 [Dancer2::Core::Request params accessor](https://metacpan.org/pod/Dancer2::Core::Request#params-source)
 for a list of valid sources.
@@ -55,10 +55,14 @@ for a list of valid sources.
           - body
           - query
 
-If you won't be using this keyword, you don't need to bother configuring
+If you won't be using the munged\_\* keywords, you don't need to bother configuring
 this plugin.
 
 # KEYWORDS
+
+## munged\_param(Str)
+
+Returns the value of a given parameter from the ["munged\_params"](#munged_params) hash.
 
 ## munged\_params
 

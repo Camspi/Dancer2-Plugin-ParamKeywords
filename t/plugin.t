@@ -41,6 +41,15 @@ use HTTP::Request::Common qw(GET POST DELETE PUT);
     any '/munged' => sub {
         munged_params->{param};
     };
+
+    any '/munged_singular/:param' => sub {
+        munged_param 'param';
+    };
+
+    any '/munged_singular' => sub {
+        munged_param 'param';
+    };
+
 }
 
 my $test = Plack::Test->create( MyApp->to_app );
@@ -100,5 +109,30 @@ subtest 'Munged params body' => sub {
 
     is( $res->decoded_content, 'baz', 'Munge honors body' );
 };
+
+subtest 'Munged param route' => sub {
+    my $res = $test->request(
+        POST '/munged_singular/foo?param=bar', Content => [ param => 'baz' ]
+    );
+
+    is( $res->decoded_content, 'foo', 'Munge singular honors route' );
+};
+
+subtest 'Munged param query' => sub {
+    my $res = $test->request(
+        POST '/munged_singular?param=bar', Content => [ param => 'baz' ]
+    );
+
+    is( $res->decoded_content, 'bar', 'Munge singular honors query' );
+};
+
+subtest 'Munged param body' => sub {
+    my $res = $test->request(
+        POST '/munged_singular', Content => [ param => 'baz' ]
+    );
+
+    is( $res->decoded_content, 'baz', 'Munge singular honors body' );
+};
+
 
 done_testing;
