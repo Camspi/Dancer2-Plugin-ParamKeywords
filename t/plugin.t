@@ -2,12 +2,12 @@ use strict;
 use warnings;
 use Test::More;
 use Plack::Test;
-use HTTP::Request::Common qw(GET POST DELETE PUT);
+use HTTP::Request::Common qw(POST);
 
 
 {
     package MyApp;
-    use Dancer2;
+    use Dancer2 0.160003;
     use Dancer2::Plugin::ParamKeywords;
 
     set plugins => { 'ParamKeywords' => {   
