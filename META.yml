@@ -19,7 +19,7 @@ name: Dancer2-Plugin-ParamKeywords
 provides:
   Dancer2::Plugin::ParamKeywords:
     file: lib/Dancer2/Plugin/ParamKeywords.pm
-    version: v0.1.2
+    version: v0.1.3
 requires:
   Dancer2::Plugin: '0'
   perl: v5.16.0
@@ -29,6 +29,6 @@ resources:
   bugtracker: https://github.com/Camspi/Dancer2-Plugin-ParamKeywords/issues
   homepage: https://github.com/Camspi/Dancer2-Plugin-ParamKeywords
   repository: https://github.com/Camspi/Dancer2-Plugin-ParamKeywords.git
-version: v0.1.2
+version: v0.1.3
 x_contributors:
   - 'Chris Tijerina <amarus18@hotmail.com>'

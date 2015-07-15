@@ -70,6 +70,14 @@ subtest 'Query param' => sub {
     is( $res->decoded_content, 'bar', 'Query returns bar' );
 };
 
+subtest 'Query param (empty)' => sub {
+    my $res = $test->request(
+        POST '/query/foo', Content => [ param => 'baz' ]
+    );
+
+    is( $res->decoded_content, '', 'Query returns empty string' );
+};
+
 subtest 'Body param' => sub {
     my $res = $test->request(
         POST '/body/foo?param=bar', Content => [ param => 'baz' ]
