@@ -46,14 +46,6 @@ register_plugin for_versions => [ 2 ] ;
 # ABSTRACT: Sugar for the params() keyword (DEPRECATED)
 # PODNAME: Dancer2::Plugin::ParamKeywords
 
-=head1 NOTICE
-
-This module is deprecated with the release of L<Dancer2>'s
-L<Hash::MultiValue> parameter keywords: route_parameters,
-query_parameters, and body_parameters.  Use this plugin
-only if you are unable to upgrade your installation of
-L<Dancer2>.
-
 =head1 SYNOPSIS
 
     use Dancer2;
@@ -66,6 +58,12 @@ L<Dancer2>.
     };
 
 =head1 DESCRIPTION
+
+This module is deprecated with the release of L<Dancer2>'s
+L<Hash::MultiValue> parameter keywords: route_parameters,
+query_parameters, and body_parameters.  Use this plugin
+only if you are unable to upgrade your installation of
+L<Dancer2>.
 
 The default L<Dancer2::Core::Request params
 accessor|Dancer2::Core::Request/"params($source)">

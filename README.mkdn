@@ -19,6 +19,12 @@ version v0.1.5
 
 # DESCRIPTION
 
+This module is deprecated with the release of [Dancer2](https://metacpan.org/pod/Dancer2)'s
+[Hash::MultiValue](https://metacpan.org/pod/Hash::MultiValue) parameter keywords: route\_parameters,
+query\_parameters, and body\_parameters.  Use this plugin
+only if you are unable to upgrade your installation of
+[Dancer2](https://metacpan.org/pod/Dancer2).
+
 The default [Dancer2::Core::Request params
 accessor](https://metacpan.org/pod/Dancer2::Core::Request#params-source)
 munges parameters in the following precedence from
@@ -57,14 +63,6 @@ for a list of valid sources.
 
 If you won't be using the munged\_\* keywords, you don't need to bother configuring
 this plugin.
-
-# NOTICE
-
-This module is deprecated with the release of [Dancer2](https://metacpan.org/pod/Dancer2)'s
-[Hash::MultiValue](https://metacpan.org/pod/Hash::MultiValue) parameter keywords: route\_parameters,
-query\_parameters, and body\_parameters.  Use this plugin
-only if you are unable to upgrade your installation of
-[Dancer2](https://metacpan.org/pod/Dancer2).
 
 # KEYWORDS
 
