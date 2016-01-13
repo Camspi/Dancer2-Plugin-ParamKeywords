@@ -1,10 +1,10 @@
 # NAME
 
-Dancer2::Plugin::ParamKeywords - Sugar for the params() keyword
+Dancer2::Plugin::ParamKeywords - Sugar for the params() keyword (DEPRECATED)
 
 # VERSION
 
-version v0.1.2
+version v0.1.3
 
 # SYNOPSIS
 
@@ -58,6 +58,14 @@ for a list of valid sources.
 If you won't be using the munged\_\* keywords, you don't need to bother configuring
 this plugin.
 
+# NOTICE
+
+This module is deprecated with the release of [Dancer2](https://metacpan.org/pod/Dancer2)'s
+[Hash::MultiValue](https://metacpan.org/pod/Hash::MultiValue) parameter keywords: route\_parameters,
+query\_parameters, and body\_parameters.  Use this plugin
+only if you are unable to upgrade your installation of
+[Dancer2](https://metacpan.org/pod/Dancer2).
+
 # KEYWORDS
 
 ## munged\_param(Str)
@@ -104,7 +112,7 @@ Chris Tijerina
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2015 by Chris Tijerina.
+This software is copyright (c) 2016 by Chris Tijerina.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

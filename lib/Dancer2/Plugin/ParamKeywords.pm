@@ -5,7 +5,7 @@ use warnings;
 package Dancer2::Plugin::ParamKeywords;
 use Dancer2::Plugin;
 
-our $VERSION = 'v0.1.2';
+our $VERSION = 'v0.1.3';
 
 foreach my $source ( qw( route query body ) ) {
     register "$source\_param" => sub {
@@ -43,8 +43,16 @@ register_plugin for_versions => [ 2 ] ;
 
 1;
 
-# ABSTRACT: Sugar for the params() keyword
+# ABSTRACT: Sugar for the params() keyword (DEPRECATED)
 # PODNAME: Dancer2::Plugin::ParamKeywords
+
+=head1 NOTICE
+
+This module is deprecated with the release of L<Dancer2>'s
+L<Hash::MultiValue> parameter keywords: route_parameters,
+query_parameters, and body_parameters.  Use this plugin
+only if you are unable to upgrade your installation of
+L<Dancer2>.
 
 =head1 SYNOPSIS
 

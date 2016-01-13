@@ -1,3 +1,10 @@
+NOTICE
+
+    This module is deprecated with the release of Dancer2's
+    Hash::MultiValue parameter keywords: route_parameters,
+    query_parameters, and body_parameters. Use this plugin only if you are
+    unable to upgrade your installation of Dancer2.
+
 SYNOPSIS
 
         use Dancer2;
